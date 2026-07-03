@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+# pytest
+.pytest_cache/
+
+# environment variables
+.env
+
+# app data
+app/tasks.json
+
+# IDEs
+.vscode/
+.idea/
+*.swp
