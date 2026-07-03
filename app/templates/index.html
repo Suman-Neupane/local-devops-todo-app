@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +29,7 @@
             min-height: 100vh;
             margin: 0;
             background-image: radial-gradient(circle at top right, #1e3a8a, transparent 40%),
-                              radial-gradient(circle at bottom left, #312e81, transparent 40%);
+                radial-gradient(circle at bottom left, #312e81, transparent 40%);
         }
 
         .container {
@@ -119,8 +120,15 @@
         }
 
         @keyframes slideIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .task-content {
@@ -196,15 +204,16 @@
             display: none;
         }
 
-        .task-list:empty + .empty-state {
+        .task-list:empty+.empty-state {
             display: block;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>DevOps Todo</h1>
-        
+        <h1>DevOps Todo to learn Devops</h1>
+
         <form class="input-group" id="taskForm">
             <input type="text" id="taskInput" placeholder="What needs to be done?" required autocomplete="off">
             <button type="submit" class="btn-add">Add</button>
@@ -330,15 +339,16 @@
         // Helper to prevent XSS
         function escapeHtml(unsafe) {
             return unsafe
-                 .replace(/&/g, "&amp;")
-                 .replace(/</g, "&lt;")
-                 .replace(/>/g, "&gt;")
-                 .replace(/"/g, "&quot;")
-                 .replace(/'/g, "&#039;");
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
         }
 
         // Initial load
         fetchTasks();
     </script>
 </body>
+
 </html>
